@@ -49,15 +49,15 @@
     </div>
   </div>
 
-  <audio data-key="81" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio data-key="81" src="sounds/clap.wav">This browser does not support AUDIO</audio>
+  <audio data-key="83" src="sounds/hihat.wav">This browser does not support AUDIO</audio>
+  <audio data-key="68" src="sounds/kick.wav">This browser does not support AUDIO</audio>
+  <audio data-key="70" src="sounds/openhat.wav">This browser does not support AUDIO</audio>
+  <audio data-key="71" src="sounds/boom.wav">This browser does not support AUDIO</audio>
+  <audio data-key="72" src="sounds/ride.wav">This browser does not support AUDIO</audio>
+  <audio data-key="74" src="sounds/snare.wav">This browser does not support AUDIO</audio>
+  <audio data-key="75" src="sounds/tom.wav">This browser does not support AUDIO</audio>
+  <audio data-key="76" src="sounds/tink.wav">This browser does not support AUDIO</audio>
 
   <script>
 
@@ -65,6 +65,7 @@
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
       if (audio === null) { return;}
       console.log(audio);
+      audio.currentTime = 0; // rewind the sound so we can play it again even if not finished
       audio.play();
     });
   </script>
